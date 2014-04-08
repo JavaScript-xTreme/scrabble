@@ -26,4 +26,8 @@ server.listen(port, function(){
   console.log('Node server listening. Port: ' + port);
 });
 
+var sockets = require('./lib/sockets');
+var io = require('socket.io').listen(server, {log:true, 'log level':2});
+io.of('/game').on('connection', sockets.connection);
+
 module.exports = app;

@@ -13,7 +13,8 @@
     "express":         "*",
     "lodash":          "*",
     "jade":            "*",
-    "express-less":    "*"
+    "express-less":    "*",
+    "socket.io":       "*"
   },
   "devDependencies": {
     "grunt":                "*",
