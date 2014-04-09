@@ -2,4 +2,14 @@ extends ../shared/template
 
 block content
   h1= title
+  input#user(type='text')
+  button#join Join
+  input#count(type='text')
+  button#pick Pick
 
+  table#users
+    thead
+      tr
+        th User
+        th Letters
+    tbody
