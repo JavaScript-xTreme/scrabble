@@ -4,7 +4,15 @@ exports.connection = function(socket){
   socket.emit('online', {date: new Date()});
   socket.on('join', join);
   socket.on('getletters', getletters);
+  socket.on('sendMove', sendMove);
 };
+
+function sendMove(data){
+  var socket = this;
+
+  socket.broadcast.emit('receiveMove', data);
+  socket.emit('receiveMove', data);
+}
 
 function getletters(data){
   var socket = this;

@@ -3,6 +3,7 @@ extends ../shared/template
 block content
   h1= title
   input#user(type='text')
+  input#color(type='text')
   button#join Join
   input#count(type='text')
   button#pick Pick
@@ -13,3 +14,10 @@ block content
         th User
         th Letters
     tbody
+
+  table#board
+    tbody
+      - for(var i = 0; i < 99; i++)
+        tr
+          - for(var j = 0; j < 99; j++)
+            td(data-x=i, data-y=j)

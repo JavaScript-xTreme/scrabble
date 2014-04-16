@@ -10,7 +10,7 @@
     "start"     : "node app/app.js"
   },
   "dependencies": {
-    "express":         "*",
+    "express":         "3.5.1",
     "lodash":          "*",
     "jade":            "*",
     "express-less":    "*",
